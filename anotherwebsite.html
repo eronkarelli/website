@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Grid Website</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #0a192f;
+            color: #8892b0;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .hero {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(45deg, #0a192f 0%, #172a45 100%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .small-heading {
+            color: #64ffda;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .big-heading {
+            color: #ccd6f6;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Grid */
+        .projects {
+            padding: 4rem 2rem;
+            background: #020c1b;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #112240;
+            padding: 2rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-title {
+            color: #ccd6f6;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills */
+        .skills {
+            padding: 4rem 2rem;
+            background: #0a192f;
+        }
+
+        .skills-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: #64ffda;
+            border-radius: 50%;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #020c1b;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid #64ffda;
+            color: #64ffda;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .big-heading {
+                font-size: 2.5rem;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-heading">Hi, my name is</p>
+            <h1 class="big-heading">Eron Shkodra.</h1>
+            <h2 class="big-heading" style="color: #8892b0;">I build things for the web.</h2>
+            <p style="max-width: 540px; margin-top: 1.5rem;">
+                I'm a software developer specializing in building exceptional digital experiences. 
+                Currently focused on building accessible, human-centered products.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3 class="project-title">E-commerce Platform</h3>
+                <p>Built with React & Node.js, handling 10k+ daily transactions.</p>
+            </div>
+            <div class="project-card">
+                <h3 class="project-title">AI Chat Application</h3>
+                <p>Natural language processing powered chatbot solution.</p>
+            </div>
+            <div class="project-card">
+                <h3 class="project-title">Mobile Fitness App</h3>
+                <p>Cross-platform fitness tracking application.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-icon"></div>
+                <span>Web Development</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"></div>
+                <span>Mobile Development</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"></div>
+                <span>UI/UX Design</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"></div>
+                <span>DevOps</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2 style="color: #ccd6f6; margin-bottom: 2rem;">Get In Touch</h2>
+        <a href="https://mail.google.com/mail/u/0/#inbox" class="contact-button">Say Hello</a>
+    </section>
+</body>
+</html>
